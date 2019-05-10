@@ -1,0 +1,14 @@
+.create-room-form{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 50%;
+    background: rgb(78, 77, 77);
+    margin: 22.5%;
+    margin-top: 100px;
+    padding: 50px;
+}
+.create-room-form h1 {
+    font-size: 50px;
+}

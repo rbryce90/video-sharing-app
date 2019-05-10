@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import CreateRoom from '../forms/createRoom/CreateRoom';
 import "./header.css";
 
 class Header extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      roomFormToggle: false
+    };
   }
 
   linkStyle = () => {
@@ -15,6 +18,7 @@ class Header extends Component {
     };
   };
   render() {
+    let {roomFormToggle} = this.state;
     return (
       <header>
         <h1>
@@ -24,10 +28,10 @@ class Header extends Component {
         </h1>
         <div />
         <ul>
-          <li>
-            <Link to="/createroom" style={this.linkStyle()}>
+          <li onClick={() => this.setState({
+              roomFormToggle: roomFormToggle === false ? true : false 
+          })}>
               Create Room
-            </Link>
           </li>
           <li>
             <Link to="/profile" style={this.linkStyle()}>
@@ -35,6 +39,7 @@ class Header extends Component {
             </Link>
           </li>
         </ul>
+        {roomFormToggle === false ? null: <CreateRoom />}
       </header>
     );
   }
