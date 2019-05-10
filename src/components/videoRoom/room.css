@@ -1,0 +1,23 @@
+
+.video-room {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    height: 89vh;
+    
+}
+
+
+.video-room iframe {
+    width: 50vw; 
+    height: 70vh;
+    margin: 10px;
+}
+.chat-box {
+    background: gray;
+    width: 40vw;
+    height: 100%;
+
+}
