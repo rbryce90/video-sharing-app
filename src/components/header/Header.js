@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import CreateRoom from '../forms/createRoom/CreateRoom';
+import CreateRoom from "../forms/createRoom/CreateRoom";
 import "./header.css";
 
 class Header extends Component {
@@ -13,12 +13,12 @@ class Header extends Component {
 
   linkStyle = () => {
     return {
-      "text-decoration": "inherit",
+      textDecoration: "inherit",
       color: "inherit"
     };
   };
   render() {
-    let {roomFormToggle} = this.state;
+    let { roomFormToggle } = this.state;
     return (
       <header>
         <h1>
@@ -28,10 +28,14 @@ class Header extends Component {
         </h1>
         <div />
         <ul>
-          <li onClick={() => this.setState({
-              roomFormToggle: roomFormToggle === false ? true : false 
-          })}>
-              Create Room
+          <li
+            onClick={() =>
+              this.setState({
+                roomFormToggle: roomFormToggle === false ? true : false
+              })
+            }
+          >
+            Create Room
           </li>
           <li>
             <Link to="/profile" style={this.linkStyle()}>
@@ -39,7 +43,7 @@ class Header extends Component {
             </Link>
           </li>
         </ul>
-        {roomFormToggle === false ? null: <CreateRoom />}
+        {roomFormToggle === false ? null : <CreateRoom />}
       </header>
     );
   }

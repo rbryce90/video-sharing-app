@@ -29,7 +29,7 @@ app.get("/", function(req, res) {
 });
 
 io.on("connection", socket => {
-  console.log("DRINK!");
+  console.log("SOCKETS ===>   DRINK!");
   socket.emit("news", { hello: "world" });
   socket.on("my other event", function(data) {
     console.log(data);
